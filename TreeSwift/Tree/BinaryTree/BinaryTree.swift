@@ -11,6 +11,7 @@ import UIKit
 class BinaryTree: NSObject {
     let nodeArray = [50,10,5,15,13,19,20,25,14,18,22,34,35];
     var rootNode : TreeNode?
+    var stack = [TreeNode]()
 
     func createBinaryTree() -> TreeNode? {
         self.rootNode = TreeNode(value: 50)
@@ -38,6 +39,8 @@ class BinaryTree: NSObject {
     func printTree() {
         print("======Inorder======")
         self.printInorderBinaryTree(rootNode: self.rootNode);
+        print("=====Iterative Inorder======")
+        self.printIterativeInorderBinaryTree(rootNode: self.rootNode)
         print("======Preorder======")
         self.printPreorderBinaryTree(rootNode: self.rootNode);
         print("======Postorder======")
@@ -70,16 +73,22 @@ class BinaryTree: NSObject {
     
     
     func printIterativeInorderBinaryTree(rootNode: TreeNode?) {
-        var queue = [TreeNode]()
-        while rootNode != nil {
-            var leftNode = rootNode
-            queue.append(leftNode!)
-            while leftNode?.leftNode != nil {
-                leftNode = leftNode?.leftNode
-                queue.append(leftNode!)
+        var node = rootNode
+        while true {
+            while node != nil {
+                self.stack.append(node!)
+                node = node!.leftNode
             }
-            let deqNode = queue.first
-            print("==>",deqNode!.value)
+            
+            if self.stack.isEmpty {
+                break
+            }
+            
+            if let popNode = stack.last  {
+                stack.removeLast()
+                print("==>", popNode.value)
+                node = popNode.rightNode
+            }
         }
 
     }
