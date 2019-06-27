@@ -12,6 +12,7 @@ class BinaryTree: NSObject {
     let nodeArray = [50,10,5,15,13,19,20,25,14,18,22,34,35];
     var rootNode : TreeNode?
     var stack = [TreeNode]()
+    var queue = [TreeNode]()
 
     func createBinaryTree() -> TreeNode? {
         self.rootNode = TreeNode(value: 50)
@@ -37,18 +38,20 @@ class BinaryTree: NSObject {
     }
     
     func printTree() {
-        print("======Inorder======")
-        self.printInorderBinaryTree(rootNode: self.rootNode)
-        print("=====Iterative Inorder======")
-        self.printIterativeInorderBinaryTree(rootNode: self.rootNode)
-        print("======Preorder======")
-        self.printPreorderBinaryTree(rootNode: self.rootNode)
-        print("=====Iterative Preorder======")
-        self.printIterativePreorderBinaryTree(rootNode: self.rootNode)
-        print("======Postorder======")
-        self.printPostorderBinaryTree(rootNode: self.rootNode);
-        print("======Iterative Postorder======")
-        self.printIterativePostorderBinaryTree(rootNode: self.rootNode)
+//        print("======Inorder======")
+//        self.printInorderBinaryTree(rootNode: self.rootNode)
+//        print("=====Iterative Inorder======")
+//        self.printIterativeInorderBinaryTree(rootNode: self.rootNode)
+//        print("======Preorder======")
+//        self.printPreorderBinaryTree(rootNode: self.rootNode)
+//        print("=====Iterative Preorder======")
+//        self.printIterativePreorderBinaryTree(rootNode: self.rootNode)
+//        print("======Postorder======")
+//        self.printPostorderBinaryTree(rootNode: self.rootNode);
+//        print("======Iterative Postorder======")
+//        self.printIterativePostorderBinaryTree(rootNode: self.rootNode)
+        print("======Iterative Level Order======")
+        self.levelOrderTraversal(rootNode: self.rootNode)
     }
     
     func printInorderBinaryTree(rootNode: TreeNode?) {
@@ -149,7 +152,23 @@ class BinaryTree: NSObject {
         }
     }
     
-    func common(){
-        
+    func levelOrderTraversal(rootNode: TreeNode?){
+        let node = rootNode
+        if node != nil {
+            self.queue.append(node!)
+            while !self.queue.isEmpty {
+                if let dequedNode = self.queue.first {
+                    print(dequedNode.value, terminator: " ")
+                    self.queue.removeFirst()
+                    if dequedNode.leftNode != nil {
+                        self.queue.append(dequedNode.leftNode!)
+                    }
+                    
+                    if dequedNode.rightNode != nil {
+                        self.queue.append(dequedNode.rightNode!)
+                    }
+                }
+            }
+        }
     }
 }
