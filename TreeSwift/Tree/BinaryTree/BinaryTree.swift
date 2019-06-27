@@ -38,13 +38,17 @@ class BinaryTree: NSObject {
     
     func printTree() {
         print("======Inorder======")
-        self.printInorderBinaryTree(rootNode: self.rootNode);
+        self.printInorderBinaryTree(rootNode: self.rootNode)
         print("=====Iterative Inorder======")
         self.printIterativeInorderBinaryTree(rootNode: self.rootNode)
         print("======Preorder======")
-        self.printPreorderBinaryTree(rootNode: self.rootNode);
+        self.printPreorderBinaryTree(rootNode: self.rootNode)
+        print("=====Iterative Preorder======")
+        self.printIterativePreorderBinaryTree(rootNode: self.rootNode)
         print("======Postorder======")
         self.printPostorderBinaryTree(rootNode: self.rootNode);
+        print("======Iterative Postorder======")
+        self.printIterativePostorderBinaryTree(rootNode: self.rootNode)
     }
     
     func printInorderBinaryTree(rootNode: TreeNode?) {
@@ -71,7 +75,6 @@ class BinaryTree: NSObject {
         }
     }
     
-    
     func printIterativeInorderBinaryTree(rootNode: TreeNode?) {
         var node = rootNode
         while true {
@@ -90,15 +93,60 @@ class BinaryTree: NSObject {
                 node = popNode.rightNode
             }
         }
-
     }
     
     func printIterativePreorderBinaryTree(rootNode: TreeNode?) {
-        
+        var node = rootNode
+        while true {
+            while node != nil {
+                print("==>", node!.value)
+                self.stack.append(node!)
+                node = node!.leftNode
+            }
+            
+            if self.stack.isEmpty {
+                break
+            }
+            
+            if let popNode = stack.last  {
+                stack.removeLast()
+                node = popNode.rightNode
+            }
+        }
+
     }
     
+
+    
     func printIterativePostorderBinaryTree(rootNode: TreeNode?) {
+        var node = rootNode
+        var rightNode : TreeNode?
         
+        while true {
+            while node != nil {
+                self.stack.append(node!)
+                node = node!.leftNode
+            }
+            
+            if self.stack.isEmpty {
+                break
+            }
+            if let popNode = stack.last  {
+                if popNode.rightNode == nil {
+                    rightNode = popNode
+                    print("==>", popNode.value)
+                    stack.removeLast()
+                } else {
+                    if popNode.rightNode?.value == rightNode?.value {
+                        rightNode = popNode
+                        print("==>", popNode.value)
+                        stack.removeLast()
+                    } else {
+                        node = popNode.rightNode
+                    }
+                }
+            }
+        }
     }
     
     func common(){
