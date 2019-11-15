@@ -53,9 +53,9 @@ class ThreadClass: NSObject {
         
         DispatchQueue(label: "SunilKumar").async { // serial queue
             Thread.printCurrent()
-               DispatchQueue.main.sync {
-                     print("H")
-               }
+           DispatchQueue.main.sync {
+                 print("H")
+           }
         }
         
         
@@ -68,7 +68,9 @@ class ThreadClass: NSObject {
             }
         }
     }
-
+    
+    let p : [Int] = [1,2,3]
+ 
 }
 
 extension Thread {
