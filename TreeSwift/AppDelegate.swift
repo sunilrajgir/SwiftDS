@@ -19,8 +19,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        let tree = BinaryTree()
 //        tree.createBinaryTree()
 //        tree.printTree()
-        
-        _ = ThreadClass()
+        testArc()
+        //_ = ThreadClass()
         
         return true
     }
@@ -48,5 +48,55 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
 
+    
+    func testArc() {
+        testStrong()
+        testWeak()
+        testUnown()
+    }
+    
+    func testStrong() {
+        var kelvin: Person?
+        var iphone: Gadget?
+         
+        kelvin = Person(name: "Kelvin")
+        iphone = Gadget(model: "iPhone 8 Plus")
+        
+        kelvin!.gadget = iphone
+        iphone!.owner = kelvin
+
+        kelvin = nil
+        iphone = nil
+        print("chack")
+    }
+    
+    func testWeak() {
+        var kelvin: Person?
+        var iphone: GadgetWeak?
+         
+        kelvin = Person(name: "Kelvin")
+        iphone = GadgetWeak(model: "iPhone 8 Plus")
+        
+        kelvin!.gadgetWeak = iphone
+        iphone!.owner = kelvin
+
+        kelvin = nil
+        iphone = nil
+        print("chack")
+    }
+    
+    func testUnown() {
+        var kelvin: Person?
+        var iphone: GadgetUnown?
+         
+        kelvin = Person(name: "Kelvin")
+        iphone = GadgetUnown(model: "iPhone 8 Plus", person: kelvin!)
+        
+        kelvin!.gadgetUnown = iphone
+        
+        kelvin = nil
+        iphone = nil
+        print("chack")
+    }
 }
 
