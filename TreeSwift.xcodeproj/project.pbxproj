@@ -16,6 +16,7 @@
 		3208CF4022C12271003EAE6C /* TreeSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3208CF3F22C12271003EAE6C /* TreeSwiftUITests.swift */; };
 		3208CF5A22C27F75003EAE6C /* TreeNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3208CF5722C27F75003EAE6C /* TreeNode.swift */; };
 		3208CF5B22C27F75003EAE6C /* BinaryTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3208CF5922C27F75003EAE6C /* BinaryTree.swift */; };
+		32AAB2F922F2E5F400BD2F9C /* ThreadClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32AAB2F822F2E5F400BD2F9C /* ThreadClass.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		3208CF4122C12271003EAE6C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3208CF5722C27F75003EAE6C /* TreeNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TreeNode.swift; sourceTree = "<group>"; };
 		3208CF5922C27F75003EAE6C /* BinaryTree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BinaryTree.swift; sourceTree = "<group>"; };
+		32AAB2F822F2E5F400BD2F9C /* ThreadClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreadClass.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 		3208CF1322C12270003EAE6C = {
 			isa = PBXGroup;
 			children = (
+				32AAB2F722F2E5B000BD2F9C /* ThreadingAndConcurrency */,
 				3208CF5622C27F75003EAE6C /* Tree */,
 				3208CF1E22C12270003EAE6C /* TreeSwift */,
 				3208CF3322C12271003EAE6C /* TreeSwiftTests */,
@@ -146,6 +149,14 @@
 				3208CF5922C27F75003EAE6C /* BinaryTree.swift */,
 			);
 			path = BinaryTree;
+			sourceTree = "<group>";
+		};
+		32AAB2F722F2E5B000BD2F9C /* ThreadingAndConcurrency */ = {
+			isa = PBXGroup;
+			children = (
+				32AAB2F822F2E5F400BD2F9C /* ThreadClass.swift */,
+			);
+			path = ThreadingAndConcurrency;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -279,6 +290,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				32AAB2F922F2E5F400BD2F9C /* ThreadClass.swift in Sources */,
 				3208CF5B22C27F75003EAE6C /* BinaryTree.swift in Sources */,
 				3208CF2222C12270003EAE6C /* ViewController.swift in Sources */,
 				3208CF2022C12270003EAE6C /* AppDelegate.swift in Sources */,
