@@ -17,6 +17,10 @@
 		3208CF5A22C27F75003EAE6C /* TreeNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3208CF5722C27F75003EAE6C /* TreeNode.swift */; };
 		3208CF5B22C27F75003EAE6C /* BinaryTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3208CF5922C27F75003EAE6C /* BinaryTree.swift */; };
 		323930EC237EA1570071CE7B /* StructureClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323930EB237EA1570071CE7B /* StructureClass.swift */; };
+		323930EF237EB9D20071CE7B /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323930EE237EB9D20071CE7B /* TestView.swift */; };
+		323930F1237EB9E40071CE7B /* TestView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 323930F0237EB9E40071CE7B /* TestView.xib */; };
+		323930F5238161D50071CE7B /* TestAutoLayoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323930F3238161D50071CE7B /* TestAutoLayoutView.swift */; };
+		323930F6238161D50071CE7B /* TestAutoLayoutView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 323930F4238161D50071CE7B /* TestAutoLayoutView.xib */; };
 		32AAB2F922F2E5F400BD2F9C /* ThreadClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32AAB2F822F2E5F400BD2F9C /* ThreadClass.swift */; };
 /* End PBXBuildFile section */
 
@@ -54,6 +58,10 @@
 		3208CF5722C27F75003EAE6C /* TreeNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TreeNode.swift; sourceTree = "<group>"; };
 		3208CF5922C27F75003EAE6C /* BinaryTree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BinaryTree.swift; sourceTree = "<group>"; };
 		323930EB237EA1570071CE7B /* StructureClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StructureClass.swift; sourceTree = "<group>"; };
+		323930EE237EB9D20071CE7B /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
+		323930F0237EB9E40071CE7B /* TestView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestView.xib; sourceTree = "<group>"; };
+		323930F3238161D50071CE7B /* TestAutoLayoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestAutoLayoutView.swift; sourceTree = "<group>"; };
+		323930F4238161D50071CE7B /* TestAutoLayoutView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestAutoLayoutView.xib; sourceTree = "<group>"; };
 		32AAB2F822F2E5F400BD2F9C /* ThreadClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreadClass.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -85,6 +93,8 @@
 		3208CF1322C12270003EAE6C = {
 			isa = PBXGroup;
 			children = (
+				323930F2238161AC0071CE7B /* AutoLayout */,
+				323930ED237EB9B10071CE7B /* XIB */,
 				323930EA237EA1350071CE7B /* StructureClass */,
 				32AAB2F722F2E5B000BD2F9C /* ThreadingAndConcurrency */,
 				3208CF5622C27F75003EAE6C /* Tree */,
@@ -160,6 +170,24 @@
 				323930EB237EA1570071CE7B /* StructureClass.swift */,
 			);
 			path = StructureClass;
+			sourceTree = "<group>";
+		};
+		323930ED237EB9B10071CE7B /* XIB */ = {
+			isa = PBXGroup;
+			children = (
+				323930EE237EB9D20071CE7B /* TestView.swift */,
+				323930F0237EB9E40071CE7B /* TestView.xib */,
+			);
+			path = XIB;
+			sourceTree = "<group>";
+		};
+		323930F2238161AC0071CE7B /* AutoLayout */ = {
+			isa = PBXGroup;
+			children = (
+				323930F3238161D50071CE7B /* TestAutoLayoutView.swift */,
+				323930F4238161D50071CE7B /* TestAutoLayoutView.xib */,
+			);
+			path = AutoLayout;
 			sourceTree = "<group>";
 		};
 		32AAB2F722F2E5B000BD2F9C /* ThreadingAndConcurrency */ = {
@@ -274,6 +302,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				323930F6238161D50071CE7B /* TestAutoLayoutView.xib in Resources */,
+				323930F1237EB9E40071CE7B /* TestView.xib in Resources */,
 				3208CF2A22C12271003EAE6C /* LaunchScreen.storyboard in Resources */,
 				3208CF2722C12271003EAE6C /* Assets.xcassets in Resources */,
 				3208CF2522C12270003EAE6C /* Main.storyboard in Resources */,
@@ -301,10 +331,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				323930EF237EB9D20071CE7B /* TestView.swift in Sources */,
 				32AAB2F922F2E5F400BD2F9C /* ThreadClass.swift in Sources */,
 				3208CF5B22C27F75003EAE6C /* BinaryTree.swift in Sources */,
 				323930EC237EA1570071CE7B /* StructureClass.swift in Sources */,
 				3208CF2222C12270003EAE6C /* ViewController.swift in Sources */,
+				323930F5238161D50071CE7B /* TestAutoLayoutView.swift in Sources */,
 				3208CF2022C12270003EAE6C /* AppDelegate.swift in Sources */,
 				3208CF5A22C27F75003EAE6C /* TreeNode.swift in Sources */,
 			);

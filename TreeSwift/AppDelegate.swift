@@ -19,7 +19,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        let tree = BinaryTree()
 //        tree.createBinaryTree()
 //        tree.printTree()
-        testArc()
+        let p = findPos(pos: 6)
+        //testArc()
         //_ = ThreadClass()
         
         return true
@@ -97,6 +98,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         kelvin = nil
         iphone = nil
         print("chack")
+    }
+    
+    func findPos(pos: Int) -> Int {
+        if pos <= 1 {
+            return 1
+        }
+        
+        return 1 + min(findPos(pos: pos - 1), findPos(pos: pos - 2))
+    }
+    
+    func getQuesNumber(threshold:Int, array:[Int]) -> Int {
+        var count = 0
+        for num in array {
+            if num == threshold {
+                
+            }
+        }
+        return count;
     }
 }
 
