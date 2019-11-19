@@ -19,6 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        let tree = BinaryTree()
 //        tree.createBinaryTree()
 //        tree.printTree()
+        DynamicProgramming()
         let p = findPos(pos: 6)
         //testArc()
         //_ = ThreadClass()

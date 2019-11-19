@@ -21,6 +21,8 @@
 		323930F1237EB9E40071CE7B /* TestView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 323930F0237EB9E40071CE7B /* TestView.xib */; };
 		323930F5238161D50071CE7B /* TestAutoLayoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323930F3238161D50071CE7B /* TestAutoLayoutView.swift */; };
 		323930F6238161D50071CE7B /* TestAutoLayoutView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 323930F4238161D50071CE7B /* TestAutoLayoutView.xib */; };
+		323930FB23829C350071CE7B /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323930FA23829C350071CE7B /* Parser.swift */; };
+		323930FE238434600071CE7B /* DynamicProgramming.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323930FD238434600071CE7B /* DynamicProgramming.swift */; };
 		32AAB2F922F2E5F400BD2F9C /* ThreadClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32AAB2F822F2E5F400BD2F9C /* ThreadClass.swift */; };
 /* End PBXBuildFile section */
 
@@ -62,6 +64,8 @@
 		323930F0237EB9E40071CE7B /* TestView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestView.xib; sourceTree = "<group>"; };
 		323930F3238161D50071CE7B /* TestAutoLayoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestAutoLayoutView.swift; sourceTree = "<group>"; };
 		323930F4238161D50071CE7B /* TestAutoLayoutView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestAutoLayoutView.xib; sourceTree = "<group>"; };
+		323930FA23829C350071CE7B /* Parser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
+		323930FD238434600071CE7B /* DynamicProgramming.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicProgramming.swift; sourceTree = "<group>"; };
 		32AAB2F822F2E5F400BD2F9C /* ThreadClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreadClass.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -93,6 +97,8 @@
 		3208CF1322C12270003EAE6C = {
 			isa = PBXGroup;
 			children = (
+				323930FC238433210071CE7B /* DS */,
+				323930F723829BFA0071CE7B /* Parser */,
 				323930F2238161AC0071CE7B /* AutoLayout */,
 				323930ED237EB9B10071CE7B /* XIB */,
 				323930EA237EA1350071CE7B /* StructureClass */,
@@ -188,6 +194,22 @@
 				323930F4238161D50071CE7B /* TestAutoLayoutView.xib */,
 			);
 			path = AutoLayout;
+			sourceTree = "<group>";
+		};
+		323930F723829BFA0071CE7B /* Parser */ = {
+			isa = PBXGroup;
+			children = (
+				323930FA23829C350071CE7B /* Parser.swift */,
+			);
+			path = Parser;
+			sourceTree = "<group>";
+		};
+		323930FC238433210071CE7B /* DS */ = {
+			isa = PBXGroup;
+			children = (
+				323930FD238434600071CE7B /* DynamicProgramming.swift */,
+			);
+			path = DS;
 			sourceTree = "<group>";
 		};
 		32AAB2F722F2E5B000BD2F9C /* ThreadingAndConcurrency */ = {
@@ -336,7 +358,9 @@
 				3208CF5B22C27F75003EAE6C /* BinaryTree.swift in Sources */,
 				323930EC237EA1570071CE7B /* StructureClass.swift in Sources */,
 				3208CF2222C12270003EAE6C /* ViewController.swift in Sources */,
+				323930FB23829C350071CE7B /* Parser.swift in Sources */,
 				323930F5238161D50071CE7B /* TestAutoLayoutView.swift in Sources */,
+				323930FE238434600071CE7B /* DynamicProgramming.swift in Sources */,
 				3208CF2022C12270003EAE6C /* AppDelegate.swift in Sources */,
 				3208CF5A22C27F75003EAE6C /* TreeNode.swift in Sources */,
 			);
