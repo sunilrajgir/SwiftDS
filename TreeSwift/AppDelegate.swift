@@ -19,11 +19,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        let tree = BinaryTree()
 //        tree.createBinaryTree()
 //        tree.printTree()
-        DynamicProgramming()
-        let p = findPos(pos: 6)
+        //DynamicProgramming()
+        //let p = findPos(pos: 6)
         //testArc()
         //_ = ThreadClass()
-        
+        self.operationQueue2()
         return true
     }
 
@@ -117,6 +117,64 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
         return count;
+    }
+    
+    func operationQueueStart() {
+        let queue = OperationQueue()
+
+        for i in 1...3 {
+            let operation = BlockOperation()
+            operation.addExecutionBlock {
+                if !operation.isCancelled {
+                        print("###### Operation \(i) in progress ######")
+                        let imageURL = URL(string: "https://upload.wikimedia.org/wikipedia/commons/0/07/Huge_ball_at_Vilnius_center.jpg")!
+                        let _ = try! Data(contentsOf: imageURL)
+                        
+                        OperationQueue.main.addOperation {
+                            print("Image \(i) downloaded...")
+                        }
+                }
+            }
+            operation.queuePriority = .high
+            queue.addOperation(operation)
+        }
+
+       /* queue.maxConcurrentOperationCount = 2
+        print("not started")
+        queue.waitUntilAllOperationsAreFinished()
+        print("waiting")
+        queue.cancelAllOperations()
+        print("canceled")*/
+    }
+    
+    func operationQueue2() {
+ 
+        let queue = OperationQueue()
+
+        for i in 1...3 {
+            let dependentOperation = BlockOperation()
+            dependentOperation.addExecutionBlock {
+                if !dependentOperation.isCancelled {
+                    print("###### Operation \(i) in progress ######")
+                    let imageURL = URL(string: "https://upload.wikimedia.org/wikipedia/commons/0/07/Huge_ball_at_Vilnius_center.jpg")!
+                    let _ = try! Data(contentsOf: imageURL)
+                    
+                    print("Image \(i) downloaded...")
+                }
+            }
+            dependentOperation.queuePriority = .high
+            
+            let operation = BlockOperation {
+                print("Execute Operation \(i), Once dependent work is done")
+            }
+            operation.addDependency(dependentOperation)
+            queue.addOperation(operation)
+            queue.addOperation(dependentOperation)
+        }
+
+        queue.maxConcurrentOperationCount = 2
+        queue.waitUntilAllOperationsAreFinished()
+        queue.cancelAllOperations()
     }
 }
 
